@@ -67,7 +67,7 @@ new_dataset <-summarise_each(new_dataset,funs(mean))
 ### Save the new dataset
 write.table(new_dataset, "~/Documents/COURSERA/Getting_and_cleaning_data/UCI HAR Dataset/new_dataset.txt", row.name=FALSE)
 
-### Test  
+### Test ok
 test666 <- read.table("~/Documents/COURSERA/Getting_and_cleaning_data/UCI HAR Dataset/new_dataset.txt", header=TRUE)
 head(test666)
 

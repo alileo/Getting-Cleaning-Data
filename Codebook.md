@@ -6,7 +6,7 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
-#Description of abbreviations of measurements
+#Description of the data
 
 leading t or f is based on time or frequency measurements.
 Body = related to body movement.
@@ -17,15 +17,6 @@ Jerk = sudden movement acceleration
 Mag = magnitude of movement
 mean and SD are calculated for each subject for each activity for each mean and SD measurements.
 The units given are g’s for the accelerometer and rad/sec for the gyro and g/sec and rad/sec/sec for the corresponding jerks.
-
-### Source:
-
-Jorge L. Reyes-Ortiz(1,2), Davide Anguita(1), Alessandro Ghio(1), Luca Oneto(1) and Xavier Parra(2)
-1 - Smartlab - Non-Linear Complex Systems Laboratory
-DITEN - Università degli Studi di Genova, Genoa (I-16145), Italy. 
-2 - CETpD - Technical Research Centre for Dependency Care and Autonomous Living
-Universitat Politècnica de Catalunya (BarcelonaTech). Vilanova i la Geltrú (08800), Spain
-activityrecognition '@' smartlab.ws
 
 ## Files in folder ‘UCI HAR Dataset’ used
 
@@ -38,13 +29,6 @@ activityrecognition '@' smartlab.ws
 * features.txt : Names of column variables in the dataTable
 * activity_labels.txt : Links the class labels with their activity name.
 
-## Variables creates
-* X_train, y_train, X_test, y_test, subject_train and subject_test are the downloaded files
-* subject, activity and data are the merged datasets
-* data_all merges data,activity and subject data
-* data_all2 containes the appropriate variable names
-* new_dataset contains the average of each variable for each activity and each subject
-
 ## script run_analysis.R 
 
 1. All the relevant data are merged with the rbind() function. 
@@ -52,3 +36,20 @@ activityrecognition '@' smartlab.ws
 3. We name the activities in the data set by using the activity_labels.txt
 4. The data set are correctly labelled with descriptive variable names with the gsub() function.
 5. From the data set in step 4, a second independent tidy data set with the average of each variable for each activity and each subject   is created thanks to groupby() and summarise_each() functions. The output file is called new_dataset.txt.
+
+## Variables creates
+* X_train, y_train, X_test, y_test, subject_train and subject_test are the downloaded files
+* subject, activity and data are the merged datasets
+* data_all merges data,activity and subject data
+* data_all2 containes the appropriate variable names
+* new_dataset contains the average of each variable for each activity and each subject
+
+
+### Source:
+
+Jorge L. Reyes-Ortiz(1,2), Davide Anguita(1), Alessandro Ghio(1), Luca Oneto(1) and Xavier Parra(2)
+1 - Smartlab - Non-Linear Complex Systems Laboratory
+DITEN - Università degli Studi di Genova, Genoa (I-16145), Italy. 
+2 - CETpD - Technical Research Centre for Dependency Care and Autonomous Living
+Universitat Politècnica de Catalunya (BarcelonaTech). Vilanova i la Geltrú (08800), Spain
+activityrecognition '@' smartlab.ws

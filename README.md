@@ -2,9 +2,9 @@
 
 ## The repository contains three files:
 
-run_analysis.R : R script getting and cleaning the raw data of the Smartphone Dataset
-CodeBook.md : description of the data and variables and information about the script
-README.md : how to run the script
+*run_analysis.R : R script getting and cleaning the raw data of the Smartphone Dataset
+*CodeBook.md : description of the data and variables and information about the script
+*README.md : how to run the script
 
 
 ##How to use

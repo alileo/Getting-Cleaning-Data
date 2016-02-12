@@ -17,3 +17,12 @@ Extracts only the measurements on the mean and standard deviation for each measu
 Uses descriptive activity names to name the activities in the data set
 Appropriately labels the data set with descriptive variable names.
 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+##How to run the script
+
+Download the Human Activity Recognition Using Smartphones Dataset  http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip 
+Unzip the folder into the same location where your run_analysis.R script is located 
+
+Open the run_analysis.R script in R. Set your working directory to your local repository folder and source the script.
+
+The script will run its analysis and transformations, producing in the end a new file called "new_dataset.txt"
